@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "1aa76c12-0b20-42d9-a4fd-afd95e75c9e2",
+		"name": "loan application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41585150"
+	},
+	"item": [
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"user email\",\r\n\"password\": \"user password\",\r\n\"returnSecureToken\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=your-key",
+					"protocol": "https",
+					"host": [
+						"identitytoolkit",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"accounts:signInWithPassword"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "your-key"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=your-key' \\\r\n--header 'Content-Type: application/json' \\\r\n--data-raw '{\r\n\"email\": \"user email\",\r\n\"password\": \"user password\",\r\n\"returnSecureToken\": true\r\n}\r\n'"
+			},
+			"response": []
+		},
+		{
+			"name": "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=your-key",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"user email\",\n\"password\": \"user password\",\n\"returnSecureToken\": true\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=your-key",
+					"protocol": "https",
+					"host": [
+						"identitytoolkit",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"v1",
+						"accounts:signInWithPassword"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "your-key"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=your-key' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n\"email\": \"user email\",\n\"password\": \"user password\",\n\"returnSecureToken\": true\n}\n'"
+			},
+			"response": []
+		},
+		{
+			"name": "create Loan",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoib2ZmaWNlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY3NzkzLCJ1c2VyX2lkIjoibzVMTGFkQUJIUmJjUlZNNlRMWHREUG92V1RwMSIsInN1YiI6Im81TExhZEFCSFJiY1JWTTZUTFh0RFBvdldUcDEiLCJpYXQiOjE3NDEyNjc3OTMsImV4cCI6MTc0MTI3MTM5MywiZW1haWwiOiJha2FzaEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWthc2hAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bTw8qdzScgewsUW3H1cu7rHEgdHCa4R12hayMjmFeMWBrLUouvtUmsIUNDwOC0_fWzo5pUzK7PvVU_ekSZwaspQXzNe7ugpIkcDhA225XdXHU2gc2abdO9p3kiiBpLl9v2VPTujMzKjOwRnjQrZoEGeyLmnb26iBwYXcT6aHUGfW9rV_OrxW-M07xGdK0MTrxwD0ZQATA-cYEBP6Uf2CwTQGnwoq_o7VkC4DW_ZksJuFxOWj6C7czz28uTWiszPSZpM6VSW_glHcZBKrYjHwl7COBqot4WeQQOQBYuKRp6Jf29_KQt7oTfjwJ62dDDcosKFqQgsraIr-4ZOamrB3Vw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoib2ZmaWNlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY3NzkzLCJ1c2VyX2lkIjoibzVMTGFkQUJIUmJjUlZNNlRMWHREUG92V1RwMSIsInN1YiI6Im81TExhZEFCSFJiY1JWTTZUTFh0RFBvdldUcDEiLCJpYXQiOjE3NDEyNjc3OTMsImV4cCI6MTc0MTI3MTM5MywiZW1haWwiOiJha2FzaEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWthc2hAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.bTw8qdzScgewsUW3H1cu7rHEgdHCa4R12hayMjmFeMWBrLUouvtUmsIUNDwOC0_fWzo5pUzK7PvVU_ekSZwaspQXzNe7ugpIkcDhA225XdXHU2gc2abdO9p3kiiBpLl9v2VPTujMzKjOwRnjQrZoEGeyLmnb26iBwYXcT6aHUGfW9rV_OrxW-M07xGdK0MTrxwD0ZQATA-cYEBP6Uf2CwTQGnwoq_o7VkC4DW_ZksJuFxOWj6C7czz28uTWiszPSZpM6VSW_glHcZBKrYjHwl7COBqot4WeQQOQBYuKRp6Jf29_KQt7oTfjwJ62dDDcosKFqQgsraIr-4ZOamrB3Vw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"loanAmount\": 5000,\r\n  \"loanPurpose\": \"Home Renovation\",\r\n  \"status\": \"pending\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Review Loan ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoib2ZmaWNlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY5MTcyLCJ1c2VyX2lkIjoibzVMTGFkQUJIUmJjUlZNNlRMWHREUG92V1RwMSIsInN1YiI6Im81TExhZEFCSFJiY1JWTTZUTFh0RFBvdldUcDEiLCJpYXQiOjE3NDEyNjkxNzIsImV4cCI6MTc0MTI3Mjc3MiwiZW1haWwiOiJha2FzaEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWthc2hAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.L9IKkpZk-JvQd-B1z0ym_sPsnjY2-5iP4Y3UNp9eNZWWVAj_ooooqyfCQczzzLzi-Zvn0wRBXmxFnMwH2P1GxV7YvvMlHcZQctiD4DPFfHsun8Tn2maWADksXHkrHCb7NTHIg-WmmFoNMVqOfloYh8rDM4RZzl9IL0js8Ehzg596WoZgBP7zGGrhy4wQaKzpGcXI6jrn23AYMmGjxoBM9KLBSXDNvfdLH1VjEk0RBbU8g7Ys7qV97wXVUAv1IO0WpLx45pd3M0oXHjjVVIt9HrziuhtBrRhsumcEjOsCofcrKneRIx5WYdhauhKDZdNBv6bQTTcXg8Qa5-OPhn6BqA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"under review\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/loans/1/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"1",
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Loan",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoibWFuYWdlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY5NDQyLCJ1c2VyX2lkIjoiWEk1blp4dkdobFR2VU53SWVFNHRDMHRXTmJ2MiIsInN1YiI6IlhJNW5aeHZHaGxUdlVOd0llRTR0QzB0V05idjIiLCJpYXQiOjE3NDEyNjk0NDIsImV4cCI6MTc0MTI3MzA0MiwiZW1haWwiOiJrYXJhbkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsia2FyYW5AZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.gcCha-r5r994Kn6Uf7chcAB2gbCDNN7SaGhcc79LnM48zsLWYlyCYSjf6Xu2Bjd-61qa8fMoHyzQHRGXcRZXoO1CQedFW5vEIZqJTm7RLjB7aDshRgIfLSHXEDxsWujHRq2LJJeC2HrcgbOfwS2aVVS8DuNj9PTyalQ7gCG11NWPaj7CXOG6hNu9NWyNU1cRnHnxuS2NTIsVJRv_NU1-ufaBdetC_0_a8--5QZVn4-TGvFYgf67dANueAPCU8BmNzMyYA3PLwa95iA3Y0_Ixqzy3Kb8EAeyTA3FtRYGvKDwbrJNj9OC1NxkqMukf-2TgWVYW83IORvtB-5SaNN75Tw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"approved\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/loans/1/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"loans",
+						"1",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all loans",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoibWFuYWdlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY5OTMzLCJ1c2VyX2lkIjoiWEk1blp4dkdobFR2VU53SWVFNHRDMHRXTmJ2MiIsInN1YiI6IlhJNW5aeHZHaGxUdlVOd0llRTR0QzB0V05idjIiLCJpYXQiOjE3NDEyNjk5MzMsImV4cCI6MTc0MTI3MzUzMywiZW1haWwiOiJrYXJhbkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsia2FyYW5AZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.AGjfGy2uYzk_iJ8difM5hetNdlzjUdxLfjeGKJnaznk0NW-4innjw34muT_Oa057JuN2A2yEFzY4my_fqVgWWqZHke6EEEwJhPyPRAzoWbEnPU7E6LMGBKOx_fPgfWDzugjnd2B-BEeZYJPEXbEvoDipAxkFgEijJ79qa38485jX70Pda4u3eyz5UZ8wN7ywXH5cLrSGs9XlU-KzTNeT41-BbvGNJ7JOPPfCsrA_qHUnrM1fUMjXR0ZLh0EimUEkXgXn9A1IixlxGXGxDLofdncfqe_15w6H2HjnXICBGedKQphU7NoVipJVrHti2n_j1u7VKE84PlquifrQ83_kOQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user details route",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoibWFuYWdlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjY1NDA4LCJ1c2VyX2lkIjoiWEk1blp4dkdobFR2VU53SWVFNHRDMHRXTmJ2MiIsInN1YiI6IlhJNW5aeHZHaGxUdlVOd0llRTR0QzB0V05idjIiLCJpYXQiOjE3NDEyNjU0MDgsImV4cCI6MTc0MTI2OTAwOCwiZW1haWwiOiJrYXJhbkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsia2FyYW5AZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.FtwSGHy6I8NCkTjuiPGjbYrhyZSZ0kcWWofqQXp1KTYAnkmy-bCA2v_351DNKwMu5WMdVLJ9_Ol0oGCPbmXBYuu5POqxqh3Nh_JIv6bOtVFm3NAH4DJYkxKFyQam1EcTflm62m_db19zBn_HsVqrzh43UsCFDuxRcFeHxaRboKPWOJqmLEfLq-ALbXz9zo2lZYzqCUjZaWHbWRVmR-MpByJyywVbUpDSJFxLiOnsUcAUtUe23-j6T6IsK7dUxFqtkgmGO9WdmIbpAzbyu9ekqCFhHo03TboGUunGyHKLnsR708hU6OmrM8qQ0lsNJO9DMFIlRdWUirdlHAAWSJIrMQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/user/XI5nZxvGhlTvUNwIeE4tC0tWNbv2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"XI5nZxvGhlTvUNwIeE4tC0tWNbv2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "set-role",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6ImJjNDAxN2U3MGE4MWM5NTMxY2YxYjY4MjY4M2Q5OThlNGY1NTg5MTkiLCJ0eXAiOiJKV1QifQ.eyJyb2xlIjoibWFuYWdlciIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9hc3NpZ25tZW50NC0zZTIwYiIsImF1ZCI6ImFzc2lnbm1lbnQ0LTNlMjBiIiwiYXV0aF90aW1lIjoxNzQxMjcxNjMwLCJ1c2VyX2lkIjoibzVMTGFkQUJIUmJjUlZNNlRMWHREUG92V1RwMSIsInN1YiI6Im81TExhZEFCSFJiY1JWTTZUTFh0RFBvdldUcDEiLCJpYXQiOjE3NDEyNzE2MzAsImV4cCI6MTc0MTI3NTIzMCwiZW1haWwiOiJha2FzaEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYWthc2hAZ21haWwuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.PXoeOvAbN23me2ACY3jmmkuWgbPwvLP8hRBhHTxfpaauOEwXFDIAZlZ4Z_nfaDPxrbapLBCL52QURdmVBp-u_UyWrFEZo9PEz7kl6ivUCDMb4Z1DIe4xC73QlO9jsa6iN8O-ciIBprALyv26IGzuEmoNmPlHuUWV1r5Lwn0pfXucuOYuxjYjGM2-3512-2huQs1MEsnAQwej8QO3gaZsl-sct8_wLwTZyF81tof7_J1j4YiLXrGXb8Uk8A_DiJ6ILnhii9TQhV3Iudrp4DRefKxjEeECSK7mZS_basddxf5bc_qNdPq55Krnlt9RXo1angh5iLYWQKepTe8VbgV5Pg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"uid\": \"o5LLadABHRbcRVM6TLXtDPovWTp1\",  \r\n  \"role\": \"manager\"  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/admin/set-role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"admin",
+						"set-role"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					"pm.sendRequest({\r",
+					"    url: \"https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAO1Ujf76EBO_xC-kPAkv5Lux8rjqtmG-0\",\r",
+					"    method: \"POST\",\r",
+					"    header: {\r",
+					"        \"Content-Type\": \"application/json\"\r",
+					"    },\r",
+					"    body: {\r",
+					"        mode: \"raw\",\r",
+					"        raw: JSON.stringify({\r",
+					"            email: \"akash@gmail.com\",\r",
+					"            password: \"ak12345\",\r",
+					"            returnSecureToken: true\r",
+					"        })\r",
+					"    }\r",
+					"}, function (err, res) {\r",
+					"    if (!err) {\r",
+					"        pm.collectionVariables.set(\"auth_token\", res.json().idToken);\r",
+					"    }\r",
+					"});\r",
+					" "
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "auth_token ",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "auth_token",
+			"value": ""
+		}
+	]
+}
