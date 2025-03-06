@@ -1,25 +1,27 @@
 import { Request, Response } from "express";
-import admin from "src/config/firebase";
+import { auth } from "../../../config/firebase"; // Import auth correctly
 
-// Augmenting the Express Request type in this file as well
-declare global {
-  namespace Express {
-    export interface Request {
-      user?: admin.auth.DecodedIdToken; // Add the user property here too
-    }
-  }
-}
-
-export async function getUserDetails(req: Request, res: Response): Promise<void> {
+export async function getUserDetails(req: Request, res: Response) {
   try {
-    if (!req.user) {
+    const {uid} = req.params; // Get user ID from the request params
+
+    if (!uid) {
       res.status(400).json({ message: "No user data found in request" });
       return;
     }
 
-    const user = await admin.auth().getUser(req.user.uid); // req.user is valid here
-    res.status(200).json({ user }); // Explicitly returning a response here
+    // Directly use auth.getUser(uid) without calling auth.auth()
+    const user = await auth.getUser(uid); // Fetch the user by UID
+
+    // If user is not found, handle that error gracefully
+    if (!user) {
+      res.status(404).json({ message: "User not found" });
+      return;
+    }
+
+    res.status(200).json({ user }); // Respond with user details
   } catch (error) {
+    console.error(error); // Log the error for better debugging
     res.status(500).json({ message: "Error fetching user details", error });
   }
 }
