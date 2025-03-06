@@ -7,7 +7,7 @@ import isAuthorized from "../middleware/authorize";
 const router = Router();
 
 // Define the API routes
-router.post("/loans", authenticate, isAuthorized({ hasRole: ["user"] }), createLoan);
+router.post("/loans", authenticate, isAuthorized({ hasRole: ["user","manager","officer"] }), createLoan);
 router.put("/loans/:id/review", authenticate, isAuthorized({ hasRole: ["officer","manager"] }), updateLoanStatus);
 router.get("/loans", authenticate, getLoans);
 router.put("/loans/:id/approve", authenticate, isAuthorized({ hasRole: ["manager"] }), updateLoanStatus);

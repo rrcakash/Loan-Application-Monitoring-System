@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // Routes
-app.use("/api/v1/loans", loanRoutes);
+app.use("/api/v1", loanRoutes);
 
 app.use("/api/v1", adminRoutes);
 app.use("/api/v1", userRoutes);
