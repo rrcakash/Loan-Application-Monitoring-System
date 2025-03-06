@@ -2,3 +2,4 @@ node_modules/
 dist/
 .vscode/
 assignment4-3e20b-firebase-adminsdk-fbsvc-e7f4e33afb.json
+token.json
