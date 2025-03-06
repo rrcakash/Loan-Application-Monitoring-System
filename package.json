@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,6 +19,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
+    "firebase-admin": "^13.2.0",
     "morgan": "^1.10.0"
   }
 }
