@@ -4,6 +4,7 @@ import { authenticateUser } from "../middleware/authMiddleware";
 
 const router = express.Router();
 
+// Use the authenticateUser middleware
 router.post("/set-role", authenticateUser, setUserRole);
 
 export default router;
